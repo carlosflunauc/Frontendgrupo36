@@ -5,13 +5,15 @@ import { SeguridadRoutingModule } from './seguridad-routing.module';
 import { IdentificacionComponent } from './identificacion/identificacion.component';
 import { RecuperarClaveComponent } from './recuperar-clave/recuperar-clave.component';
 import { CambioClaveComponent } from './cambio-clave/cambio-clave.component';
+import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 
 
 @NgModule({
   declarations: [
     IdentificacionComponent,
     RecuperarClaveComponent,
-    CambioClaveComponent
+    CambioClaveComponent,
+    CerrarSesionComponent
   ],
   imports: [
     CommonModule,
