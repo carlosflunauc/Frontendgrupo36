@@ -9,7 +9,7 @@ const routes: Routes = [
     component: IdentificacionComponent
   },
 {
-  path:'cerrar-sesion',
+  path: 'cerrar-sesion',
   component: CerrarSesionComponent
 }  
 ];

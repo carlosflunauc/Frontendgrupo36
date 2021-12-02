@@ -46,7 +46,10 @@ Instalar Angular
     9. Instalar Materialize
         npm install materialize-css@next
 
-    10. Instalar crypto-js en Angular de la siguiente forma:
+    10. Creacion Servicios
+        ng g s servicios/seguridad
+
+    11. Instalar crypto-js en Angular de la siguiente forma:
          npm install crypto-js --save
          npm install @types/crypto-js --save-dev
 
