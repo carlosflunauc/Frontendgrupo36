@@ -30,11 +30,11 @@ export class IdentificacionComponent implements OnInit {
    // alert(usuario)
    // alert(clave)
    let claveCifrada= CryptoJS.MD5(clave).toString();
-   this.servicioSeguridad.Identificar(usuario,claveCifrada).subscribe((datos: any) => {
+   this.servicioSeguridad.Identificar(usuario, claveCifrada).subscribe((datos: any) => {
      this.servicioSeguridad.AlmacenarSesion(datos);
      this.router.navigate(["/inicio"]);
-     alert("Datos Correctos")
-   },(errro:any) =>{
+     //alert("Datos Correctos")
+   },(errro: any) => {
     alert("Datos Invalidos")
    })
   }

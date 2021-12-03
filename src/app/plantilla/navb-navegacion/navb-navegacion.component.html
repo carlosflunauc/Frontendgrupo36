@@ -3,17 +3,17 @@
       <a routerLink="/inicio" class="brand-logo">Logo</a>
       <a routerLink="/inicio" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a routerLink="/administracion/usuarios/buscar-usuario">Usuarios</a></li>
-        <li><a routerLink="/administracion/productos/buscar-producto">Productos</a></li>
-        <li><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
-        <li><a routerLink="/seguridad/identificar">Inicio Sesion</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/usuarios/buscar-usuario">Usuarios</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/productos/buscar-producto">Productos</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Inicio Sesion</a></li>
       </ul>
     </div>
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li><a routerLink="/administracion/usuarios/buscar-usuario">Usuarios</a></li>
-    <li><a routerLink="/administracion/productos/buscar-producto">Productos</a></li>
-    <li><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
-    <li><a routerLink="/seguridad/identificar">Inicio Sesion</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/usuarios/buscar-usuario">Usuarios</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/productos/buscar-producto">Productos</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
+    <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Inicio Sesion</a></li>
   </ul>
