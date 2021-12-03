@@ -3,8 +3,8 @@
       <a routerLink="/inicio" class="brand-logo">Logo</a>
       <a routerLink="/inicio" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li *ngIf="seInicioSesion"><a routerLink="/administracion/usuarios/buscar-usuario">Usuarios</a></li>
-        <li *ngIf="seInicioSesion"><a routerLink="/administracion/productos/buscar-producto">Productos</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-usuario">Usuarios</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-producto">Productos</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
         <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Inicio Sesion</a></li>
       </ul>
@@ -12,8 +12,8 @@
   </nav>
 
   <ul class="sidenav" id="mobile-demo">
-    <li *ngIf="seInicioSesion"><a routerLink="/administracion/usuarios/buscar-usuario">Usuarios</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/administracion/productos/buscar-producto">Productos</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-usuario">Usuarios</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-producto">Productos</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
     <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Inicio Sesion</a></li>
   </ul>

@@ -1,4 +1,4 @@
-import { SeguridadService } from './../../../servicios/seguridad.service';
+import { SeguridadService } from 'src/app/servicios/seguridad.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -16,5 +16,4 @@ export class CerrarSesionComponent implements OnInit {
     this.servicioSeguridad.EliminarInformacionSesion();
     this.router.navigate(['/inicio'])
   }
-
 }

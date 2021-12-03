@@ -54,6 +54,7 @@ Identificar(usuario: string, clave: string):Observable<ModeloIdentificar>{
 AlmacenarSesion(datos: ModeloIdentificar){
   datos.siestaIdentificado= true;
   let stringDatos =JSON.stringify(datos);
+  localStorage.setItem("datosSesion", stringDatos);
   this.RefrescarDatosSesion(datos)
 }
 
@@ -67,4 +68,15 @@ SeHaIniciadoSesion(){
   let datosString = localStorage.getItem("datosSesion");
   return datosString;
 }
+
+ObtenerToken(){
+  let datosString = localStorage.getItem("datosSesion");
+  if(datosString){
+    let datos = JSON.parse(datosString);
+    return datos.tk;
+  } else{
+    return '';
+  }
+}
+
 }
