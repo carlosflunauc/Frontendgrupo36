@@ -1,3 +1,5 @@
+import { ProductoService } from './../../../../servicios/producto.service';
+import { ModelProducto } from './../../../../modelos/producto.modelo';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarProductoComponent implements OnInit {
 
-  constructor() { }
+  listadoRegistros : ModelProducto[] = [];
+  constructor(private productoServicio: ProductoService) { }
 
   ngOnInit(): void {
+    this.ObtenerListadoProductos();
+  }
+  ObtenerListadoProductos(){
+    this.productoServicio.ObtenerRegistros().subscribe((datos: ModelProducto[])=>{
+      this.listadoRegistros = datos;
+    })
   }
 
 }
