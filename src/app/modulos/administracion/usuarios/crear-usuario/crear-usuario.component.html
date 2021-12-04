@@ -1,1 +1,40 @@
-<p>crear-usuario works!</p>
+
+  <div class="container">
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="col-md-6">
+        <label for="txtNombres" class="form-label">Nombres</label>
+        <input type="text" class="form-control" id="txtNombres" required>
+        <div class="invalid-feedback">
+         El nombre es obligatorio
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="txtApellidos" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="txtApellidos" required>
+        <div class="invalid-feedback">
+          Los apellidos son obligatorios
+        </div>
+      </div>
+      <div class="col-md-8">
+        <label for="txtCorreo" class="form-label">Correo Electronico</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input type="email" class="form-control" id="txtCorreo" aria-describedby="inputGroupPrepend" required>
+          <div class="invalid-feedback">
+            El correo electronico es obligatorio
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="txtCelular" class="form-label">Celular</label>
+        <input type="number" class="form-control" id="txtCelular" required>
+        <div class="invalid-feedback">
+          El numero celular es obligatorio
+        </div>
+      </div>
+      
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Registrar Usuario</button>
+      </div>
+    </form>
+</div>
