@@ -28,4 +28,24 @@ export class ProductoService {
     ObtenerRegistros(): Observable<ModeloProducto[]>{
       return this.http.get<ModeloProducto[]>(`${this.url}/productos`);
     }
+
+    ObtenerRegistrosPorId(id: string): Observable<ModeloProducto>{
+      return this.http.get<ModeloProducto>(`${this.url}/productos/${id}`);
+    }
+
+    ActulizarProducto(producto: ModeloProducto): Observable<ModeloProducto>{
+      return this.http.put<ModeloProducto>(`${this.url}/productos/${producto.id}`, producto,{
+        headers: new HttpHeaders({
+          'Authorization':`Bearer${this.token}`
+        })
+      })
+    }
+
+    EliminarProducto(id:string):Observable<any>{
+      return this.http.delete(`${this.url}/productos/${id}`,{
+        headers : new HttpHeaders({
+          'Authorization':`Bearer${this.token}`
+        })
+      })
+    }
 }
