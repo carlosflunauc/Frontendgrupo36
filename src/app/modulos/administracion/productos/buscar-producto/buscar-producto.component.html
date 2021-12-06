@@ -5,7 +5,7 @@
             <th>Nombre</th>
             <th>Precio</th>
             <th>Imagen</th>
-            <th>Editar</th>
+            <th colspan="2" class="center">Editar</th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +16,7 @@
                 <img src="{{p.imagen}}" class="imagenProducto" />
             </td>
             <td><a routerLink="/administracion/editar-producto/{{p.id}}" class="btn">Editar Producto</a></td>
+            <td><a routerLink="/administracion/eliminar-producto/{{p.id}}" class="btn">Eliminar Producto</a></td>
         </tr>
     </tbody>
 </table>

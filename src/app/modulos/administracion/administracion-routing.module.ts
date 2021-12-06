@@ -34,9 +34,13 @@ const routes: Routes = [
     component: CrearProductoComponent
   },
   {
-    path: 'editar-producto',
+    path: 'editar-producto/:id',
     component: EditarProductoComponent
   },
+ /* {
+    path:'listar-productos',
+    component: BuscarProductoComponent
+  },*/
   {
     path: 'buscar-producto',
     component: BuscarProductoComponent

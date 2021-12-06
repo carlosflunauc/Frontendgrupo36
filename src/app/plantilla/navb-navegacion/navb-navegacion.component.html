@@ -5,6 +5,7 @@
       <ul class="right hide-on-med-and-down">
         <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-usuario">Usuarios</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-producto">Productos</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="/administracion/crear-producto">Crear Producto</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
         <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Inicio Sesion</a></li>
       </ul>
@@ -14,6 +15,7 @@
   <ul class="sidenav" id="mobile-demo">
     <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-usuario">Usuarios</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-producto">Productos</a></li>
+    <li *ngIf="!seInicioSesion"><a routerLink="/administracion/crear-producto">Crear Producto</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
     <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Inicio Sesion</a></li>
   </ul>
