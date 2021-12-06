@@ -1,3 +1,4 @@
+import { Validators } from '@angular/forms';
 import { EditarUsuarioComponent } from './usuarios/editar-usuario/editar-usuario.component';
 import { EliminarUsuarioComponent } from './usuarios/eliminar-usuario/eliminar-usuario.component';
 import { BuscarUsuarioComponent } from './usuarios/buscar-usuario/buscar-usuario.component';
@@ -8,6 +9,7 @@ import { CrearProductoComponent } from './productos/crear-producto/crear-product
 import { EditarProductoComponent } from './productos/editar-producto/editar-producto.component';
 import { BuscarProductoComponent } from './productos/buscar-producto/buscar-producto.component';
 import { EliminarProductoComponent } from './productos/eliminar-producto/eliminar-producto.component';
+import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 
 const routes: Routes = [
   {
@@ -31,11 +33,13 @@ const routes: Routes = [
 
   {
     path: 'crear-producto',
-    component: CrearProductoComponent
+    component: CrearProductoComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path: 'editar-producto/:id',
-    component: EditarProductoComponent
+    component: EditarProductoComponent,
+    canActivate:[ValidadorSesionGuard]
   },
  /* {
     path:'listar-productos',
@@ -43,11 +47,13 @@ const routes: Routes = [
   },*/
   {
     path: 'buscar-producto',
-    component: BuscarProductoComponent
+    component: BuscarProductoComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path: 'eliminar-producto',
-    component: EliminarProductoComponent
+    component: EliminarProductoComponent,
+    canActivate:[ValidadorSesionGuard]
   }
 ];
 
