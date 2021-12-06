@@ -57,6 +57,12 @@ Instalar Angular
 
         import * as CryptoJS from 'crypto-js';
         import CryptoJS = require('crypto-js');
+    
+    12. Crear la carpeta de servicios.
+        ng g s servicios/producto
+
+    13. Crear la carpeta de guardianes.
+        ng g g guardianes/validadorSesion
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
