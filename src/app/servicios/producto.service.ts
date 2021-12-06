@@ -25,5 +25,7 @@ export class ProductoService {
         })
       })
     }
-    
+    ObtenerRegistros(): Observable<ModeloProducto[]>{
+      return this.http.get<ModeloProducto[]>(`${this.url}/productos`);
+    }
 }

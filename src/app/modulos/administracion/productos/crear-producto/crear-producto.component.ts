@@ -38,9 +38,10 @@ export class CrearProductoComponent implements OnInit {
     p.imagen = imagen;
 
     this.servicioProducto.CrearProducto(p).subscribe((datos: ModeloProducto) =>{
-      alert("Producto ALmacenado Correctamente");
+      alert("Producto Almacenado Correctamente");
+      this.router.navigate(["/administracion/buscar-producto"]);
     }, (error: any) =>{
-      alert("Error almacenando el prodcto");
+      alert("Error Almacenando el producto");
     })
   }
 }
