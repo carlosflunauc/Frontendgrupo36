@@ -4,7 +4,7 @@
       <a routerLink="/inicio" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-usuario">Usuarios</a></li>
-        <li *ngIf="!seInicioSesion"><a href="http://127.0.0.1:5501/Frontend_bootstrap/index.html">Crear Usuario</a></li>
+        <li *ngIf="seInicioSesion"><a href="http://127.0.0.1:5501/Frontend_bootstrap/index.html">Crear Usuario</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-producto">Productos</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
         <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Inicio Sesion</a></li>
@@ -14,7 +14,7 @@
 
   <ul class="sidenav" id="mobile-demo">
     <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-usuario">Usuarios</a></li>
-    <li *ngIf="!seInicioSesion"><a routerLink="/administracion/crear-usuario">Crear Usuario</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/crear-usuario">Crear Usuario</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-producto">Productos</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesion</a></li>
     <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Inicio Sesion</a></li>

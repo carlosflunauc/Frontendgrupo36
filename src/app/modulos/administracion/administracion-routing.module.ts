@@ -8,6 +8,7 @@ import { CrearProductoComponent } from './productos/crear-producto/crear-product
 import { EditarProductoComponent } from './productos/editar-producto/editar-producto.component';
 import { BuscarProductoComponent } from './productos/buscar-producto/buscar-producto.component';
 import { EliminarProductoComponent } from './productos/eliminar-producto/eliminar-producto.component';
+import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 
 const routes: Routes = [
   {
@@ -31,7 +32,8 @@ const routes: Routes = [
 
   {
     path: 'crear-producto',
-    component: CrearProductoComponent
+    component: CrearProductoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'editar-producto/:id',
