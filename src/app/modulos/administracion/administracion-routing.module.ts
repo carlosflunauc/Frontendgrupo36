@@ -13,19 +13,23 @@ import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard'
 const routes: Routes = [
   {
     path: 'crear-usuario',
-    component: CrearUsuarioComponent
+    component: CrearUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'buscar-usuario',
-    component: BuscarUsuarioComponent
+    component: BuscarUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'editar-usuario',
-    component: EditarUsuarioComponent
+    component: EditarUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'eliminar-usuario',
-    component: EliminarUsuarioComponent
+    component: EliminarUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
 
   // producto
@@ -37,15 +41,18 @@ const routes: Routes = [
   },
   {
     path: 'editar-producto/:id',
-    component: EditarProductoComponent
+    component: EditarProductoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'buscar-producto',
-    component: BuscarProductoComponent
+    component: BuscarProductoComponent/*,
+    canActivate: [ValidadorSesionGuard]*/
   },
   {
     path: 'eliminar-producto/:id',
-    component: EliminarProductoComponent
+    component: EliminarProductoComponent,
+    canActivate: [ValidadorSesionGuard]
   }
 ];
 
